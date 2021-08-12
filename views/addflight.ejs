@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/addflight.css">
+    <link rel="stylesheet" href="css/head.css">
+</head>
+<body>
+  <%- include('include/head') %>
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="img/flight2.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form action="addflight" method="POST" class="register-form" id="register-form">
+                        <h2><center>ADD FLIGHTS</center></h2>
+                        <div class="form-group">
+                            <label for="flight_code">Flight-Code :</label>
+                            <input type="text" name="flight_code" id="flight_code">
+                        </div>
+                        <div class="form-group">
+                            <label for="source">Source :</label>
+                            <input type="text" name="source" id="source" />
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination :</label>
+                            <input type="text" name="destination" id="destination" />
+                        </div>
+                        <div class="form-group">
+                            <label for="arrival">Arrival :</label>
+                            <input type="time" name="arrival" id="arrival" />
+                        </div>
+                        <div class="form-group">
+                            <label for="departure">Departure :</label>
+                            <input type="time" name="departure" id="departure" />
+                        </div>
+                        <div class="form-group">
+                            <label for="airline_id">Airline-ID :</label>
+                            <input type="text" name="airline_id" id="airline_id" />
+                        </div>
+                        <div class="form-submit">
+                            <input type="reset" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

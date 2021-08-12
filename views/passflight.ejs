@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/airport.css">
+        <link rel="stylesheet" href="css/head.css">
+    </head>
+    <body>
+        <%- include('include/head') %>
+        <div class="main">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-img">
+                        <img src="img/tab1.jpg" alt="">
+                    </div>
+                    <div class="signup-form">
+                        <form method="POST" class="register-form" id="register-form">
+                            <h1><center>PASSENGER FLIGHT</center></h1>
+                            <% if(data.length){ 
+                                for(var i = 0;i < data.length;i++) { %>
+                            <div class="form-group">
+                                <label for="alid">PID:</label>
+                                <label for="alid"><%=data[i].PID%></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="alname">FLIGHT CODE:</label>
+                                <label for="alname"><%=data[i].FLIGHT_CODE%></label>
+                            </div>
+                            <% }
+                        }else{ %>
+                            <h2>NO AIRLINE</h2>
+                        <% } %>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </body>
+</html>

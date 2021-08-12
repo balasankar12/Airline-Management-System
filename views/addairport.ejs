@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/addflight.css">
+    <link rel="stylesheet" href="css/head.css">
+</head>
+<body>
+  <%- include('include/head') %>
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="img/signup-img.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <h2><center>ADD AIRPORT</center></h2>
+                        <div class="form-group">
+                            <label for="ap_name">Airport-Name :</label>
+                            <input type="text" name="ap_name" id="ap_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State :</label>
+                            <input type="text" name="state" id="state" />
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country :</label>
+                            <input type="text" name="country" id="country" />
+                        </div>
+                        <div class="form-group">
+                            <label for="c_name">City Name :</label>
+                            <input type="text" name="c_name" id="c_name" />
+                        </div>
+                        
+                        <div class="form-submit">
+                            <input type="reset" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

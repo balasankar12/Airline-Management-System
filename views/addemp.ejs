@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/addflight.css">
+    <link rel="stylesheet" href="css/head.css">
+</head>
+<body>
+  <%- include('include/head') %>
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="img/empimg.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form method="POST" action="addemp" class="register-form" id="register-form">
+                        <h2><center>ADD EMPLOYEE</center></h2>
+                        <div class="form-group">
+                            <label for="ssn">SSN :</label>
+                            <input type="text" name="ssn" id="ssn">
+                        </div>
+                        <div class="form-group">
+                            <label for="ename">EName :</label>
+                            <input type="text" name="ename" id="ename" />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone-no  :</label>
+                            <input type="number" name="phone" id="phone" />
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age :</label>
+                            <input type="number" name="age" id="age" />
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender :</label>
+                            <input type="text" name="gender" id="gender" />
+                        </div>
+                        <div class="form-group">
+                            <label for="jobtype">Job-Type :</label>
+                            <input type="text" name="jobtype" id="jobtype" />
+                        </div>
+                        <div class="form-group">
+                            <label for="apname">Airport-name :</label>
+                            <input type="text" name="apname" id="apname" />
+                        </div>
+                        <div class="form-submit">
+                            <input type="reset" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

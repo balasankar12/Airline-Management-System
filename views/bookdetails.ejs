@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/view.css">
+        <link rel="stylesheet" href="css/head.css">
+    </head>
+    <body>
+        <%- include('include/head') %>
+        <div >
+            
+                <div class="table-data">
+                    <h2>BOOKING DETAILS</h2>
+                    <table border="1">
+                        <tr>
+                            <th>TICKETNO</th>
+                            <th>PASSPORTNO</th>
+                            <th>SOURCE</th>
+                            <th>DESTINATION</th>
+                            <th>DATE OF TRAVEL</th>
+                            <th>SEAT NO</th>
+                            <th>CLASS</th>
+                            <th>DATE OF BOOKING</th>
+                            <th>PID</th>
+                        </tr>
+                        <% if(data.length){ 
+                        for(var i = 0;i < data.length;i++) { %>
+                        <tr>
+                            <td><%=data[i].TICKET_NUMBER%></td>
+                            <td><%=data[i].PASSPORTNO%></td>
+                            <td><%=data[i].SOURCE%></td>
+                            <td><%=data[i].DESTINATION%></td>
+                            <td><%=data[i].DATE_OF_TRAVEL%></td>
+                            <td><%=data[i].SEATNO%></td>
+                            <td><%=data[i].CLASS%></td>
+                            <td><%=data[i].DATE_OF_BOOKING%></td>
+                            <td><form action="passflight" method="post"><a href="passflight"><input type="submit" value="<%=data[i].PID%>" name="pid" id="pid"></a></form></td>
+                        </tr>
+                        <% }
+                        }else{ %>
+                        <tr>
+                            <td colspan="4">No user</td>
+                        </tr>
+                        <% } %>
+                    </table>
+                </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/view.css">
+        <link rel="stylesheet" href="css/head.css">
+    </head>
+    <body>
+        <%- include('include/head') %>
+        <div class=""tab>
+            <form method="get">
+                <div class="table-data">
+                    <h2>PASSENGER DETAILS</h2>
+                    <table border="1">
+                        <tr>
+                            <th>PASSPORTNO</th>
+                            <th>FNAME</th>
+                            <th>LNAME</th>
+                            <th>AGE</th>
+                            <th>SEX</th>
+                            <th>PHONE</th>
+                        </tr>
+                        <% if(data.length){ 
+                        for(var i = 0;i < data.length;i++) { %>
+                        <tr>
+                            <td><%=data[i].PASSPORTNO%></td>
+                            <td><%=data[i].FNAME%></td>
+                            <td><%=data[i].LNAME%></td>
+                            <td><%=data[i].AGE%></td>
+                            <td><%=data[i].SEX%></td>
+                            <td><%=data[i].PHONE%></td>
+                        </tr>
+                        <% }
+                        }else{ %>
+                        <tr>
+                            <td colspan="4">No user</td>
+                        </tr>
+                        <% } %>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

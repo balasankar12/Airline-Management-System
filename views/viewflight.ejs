@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/view.css">
+        <link rel="stylesheet" href="css/head.css">
+    </head>
+    <body>
+        <%- include('include/head') %>
+        <div >
+          
+                <div class="table-data">
+                    <h2>FLIGHTS DETAILS</h2>
+                    <table border="1">
+                        <tr>
+                            <th>FLIGHT-CODE</th>
+                            <th>SOURCE</th>
+                            <th>DESTINATION</th>
+                            <th>ARRIVAL</th>
+                            <th>DEPARTURE</th>
+                            <th>AIRLINE-ID</th>
+                        </tr>
+                        <% if(data.length){ 
+                        for(var i = 0;i < data.length;i++) { %>
+                        <tr>
+                            <td><%=data[i].flight_CODE%></td>
+                            <td><%=data[i].SOURCE%></td>
+                            <td><%=data[i].DESTINATION%></td>
+                            <td><%=data[i].ARRIVAL%></td>
+                            <td><%=data[i].DEPARTURE%></td>
+                            <td><form action="airline" method="post"><a href="airline"><input type="submit" value="<%=data[i].AIRLINEID%>" name="airid" id="airid"></a></form></td>
+                        </tr>
+                        <% }
+                        }else{ %>
+                        <tr>
+                            <td colspan="4">No user</td>
+                        </tr>
+                        <% } %>
+                    </table>
+
+                </div>
+       
+        </div>
+    </body>
+</html>
